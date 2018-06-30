@@ -125,11 +125,72 @@ From K$\ddot{o}$nig Theorem, we know that a graph is bipartite if and only if it
 \end{enumerate}
 \end{problem}
 
+\section{The spectrum of some special graphs}
+
+\begin{problem}{2.1}\label{problem2.1}
+The graphs $C_4\cup K_1$ and $K_{1,4}$ are clearly non-isomorphic. Prove these are cospectral by proving that 
+\begin{equation*}
+\sigma(C_4\cup K_1) = \sigma(K_{1,4}) = 2^1, 0^3, (-2)^1.
+\end{equation*}
+\end{problem}
+
+\begin{proof}
+Lets start by calculate $\sigma(C_4\cup K_1)$
+\begin{equation*}
+det (C_4\cup K_1 - \lambda I) =
+\begin{vmatrix}
+-\lambda & 1             & 0             & 1                        & 0 \\ 
+1             & -\lambda & 1             & 0                         & 0 \\ 
+0             & 1             & -\lambda & 1                         & 0 \\ 
+1             & 0             & 1             & -\lambda             & 0 \\ 
+0             & 0             & 0             & 0                         & -\lambda \\ 
+\end{vmatrix} =
+-\lambda
+\begin{vmatrix}
+-\lambda & 1             & 0             & 1                         \\ 
+1             & -\lambda & 1             & 0                          \\ 
+0             & 1             & -\lambda & 1                          \\ 
+1             & 0             & 1             & -\lambda             \\ 
+\end{vmatrix} =-\lambda  det (C_4 - \lambda I)
+\end{equation*}
+we know from \cite[Example 7]{adjacency_matrix}  that the eigenvalues of $C_4$ are given by $\{2cos(\frac{2\pi k}{4}) \mid k \in [0, 3]\} = \{ 2, 0, -2, 0 \}$ each with multiplicity 1.
+Second lets calculate $\sigma(K_{1,4})$, we know from \cite[Example 9]{adjacency_matrix} that $K_{1,3}$ has precisely two non zero eigenvalues $\pm \sqrt{4}$ and that 0 is an eigenvalue with multiplicity 3.
+\end{proof}
+
+\begin{problem}{2.2.1}\label{problem2.2.1}
+The null graph or the empty graph is an n-vertex graph with no edges. Determine its spectrum.
+\end{problem}
+
+\begin{proof}
+
+\end{proof}
+
+\begin{problem}{2.2.2}\label{problem2.2.2}
+Determine $\sigma(K_n)$ using the fact that the null graph on n-vertices is the complement of $K_4$.
+\end{problem}
+
+\begin{proof}
+
+\end{proof}
+
+\begin{problem}{2.3}\label{problem2.3}
+Determine $\sigma(K_{n_1,n_2})$ by viewing it as the join of two empty graphs one with $n_1$ vertices and the other with $n_2$ vertices.
+\end{problem}
+
+\begin{proof}
+
+\end{proof}
+
 \begin{thebibliography}{9} 
 \bibitem{konig_egervary}
 Elad Aigner-Horev,
 The K$\ddot{o}$nig-Egerv$\acute{a}$ry theorem.
 \\\texttt{http://www.elad-horev.org/Expositions/Konig\_Egervary.pdf}
+
+\bibitem{adjacency_matrix}
+Elad Aigner-Horev,
+The K$\ddot{o}$nig-Egerv$\acute{a}$ry theorem.
+\\\texttt{http://www.elad-horev.org/Expositions/Adjacency\_Matrix.pdf}
 \end{thebibliography}
 
 \end{document}
