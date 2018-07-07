@@ -227,6 +227,98 @@ x ^ {n_1 + n_2 - 2}  (x^2 - n_1n_2)
 The spectrum of $K_{n_1,n_2}$ is $0 ^ {n_1 + n_2 - 2}, \pm\sqrt{n_1n_2}$.
 \end{proof}
 
+\section{Connectivity and spectrum}
+
+\begin{problem}{3.1}\label{problem3.1}
+The spectrum of a graph is the union of the spectrum of its connected components where for multiplicities are added whenever there is a shared eigenvalue between components.
+\end{problem}
+
+\begin{proof}
+Notice that
+\begin{equation*}
+\begin{pmatrix}
+A(G) - \lambda I_{\abs{V(G)}} & 0 \\ 
+0             & A(H) - \lambda I_{\abs{V(H)}} \\
+\end{pmatrix} =
+\begin{pmatrix}
+A(G) - \lambda I_{\abs{V(G)}} & 0 \\ 
+0             &  I_{\abs{V(H)}} \\
+\end{pmatrix}
+\begin{pmatrix}
+ I_{\abs{V(G)}} & 0 \\ 
+0             & A(H) - \lambda I_{\abs{V(H)}} \\
+\end{pmatrix}
+\end{equation*}
+For square matrices A and B of equal size, $\det(AB)=\det(A)\det(B)$ \cite{determinant}.
+Lets calculate the spectrum of $A(G\cup H)$ 
+\begin{multline*}
+\begin{vmatrix}
+A(G) - \lambda I_{\abs{V(G)}} & 0 \\ 
+0             & A(H) - \lambda I_{\abs{V(H)}} \\
+\end{vmatrix} =
+\begin{vmatrix}
+A(G) - \lambda I_{\abs{V(G)}} & 0 \\ 
+0             &  I_{\abs{V(H)}} \\
+\end{vmatrix}
+\begin{vmatrix}
+ I_{\abs{V(G)}} & 0 \\ 
+0             & A(H) - \lambda I_{\abs{V(H)}} \\
+\end{vmatrix} =\\
+\begin{vmatrix}
+A(G) - \lambda I_{\abs{V(G)}}\\
+\end{vmatrix}
+\begin{vmatrix}
+A(H) - \lambda I_{\abs{V(H)}} \\
+\end{vmatrix}
+\end{multline*}
+
+\end{proof}
+
+\begin{problem}{3.2}\label{problem3.2}
+An irreducible real symmetric matrix $L$ is then a matrix that cannot be conjugated into block upper-triangular from; that is for every permutation matrix $P$ conformable with $L$ we have that
+\begin{equation*}
+P^{-1}LP\neq
+\begin{pmatrix}
+A  	& B \\ 
+0       & C\\
+\end{pmatrix} 
+\end{equation*}
+\end{problem}
+
+\begin{proof}
+\begin{equation*}
+(P^{-1}LP)_{i,j} = (P^{T}LP)_{i,j} = \Sigma_{u=1}^n (\Sigma_{k=1}^n P^T_{i,k} L_{k,u}) P_{u,j} 
+\end{equation*}
+Notice that $i$ must equal $j$ to have a chance to not equal zero, therefore the only case is for $B$ to be equal to the zero matrix but we know that $L$ is irreducible therefore the claim holds.
+\end{proof}
+
+\begin{problem}{3.3}\label{problem3.3}
+Let $M$ be a real symmetric matrix. Then $M$ is irreducible if and only if $G^M$ is connected.
+\end{problem}
+
+\begin{proof}
+ $M$ is irreducible $\rightarrow$  $G^M$ is connected.\\
+ Assume $M$ is reducible, then there is non-trivial partition $U\cup W = [n]$ such that $M_{i,j} = 0$ for all $(i,j)\in U \times W$. From symmetry  $M_{j,i} = 0$. Then there will be no edges in $G^M$ between element in $U$ and element in $W$ and because there is non-trivial partition $U$ and $W$ can not be empty, so $G^M$ must be disconnect.
+On the other hand,  $G^M$ is connected $\rightarrow$ $M$ is irreducible.
+Assume $G^M$ is connected, then there is path between every two vertices, and so there is no non-trivial partition so $M$ must be irreducible.
+\end{proof}
+
+\begin{problem}{3.4}\label{problem3.4}
+Let $M$ be a real symmetric non-negative matrix of order $n$. Then $M$ is reducible if and only if for every $i,j\in [n]$ there exists a $k > o$ such that $(M^k)_{i,j}>0$.
+\end{problem}
+
+\begin{proof}
+
+\end{proof}
+
+\begin{problem}{3.5}\label{problem3.5}
+A graph is connected if and only if its index is simple with a strictly positive eigenvector.
+\end{problem}
+
+\begin{proof}
+
+\end{proof}
+
 \begin{thebibliography}{9} 
 \bibitem{konig_egervary}
 Elad Aigner-Horev,
@@ -237,6 +329,11 @@ The K$\ddot{o}$nig-Egerv$\acute{a}$ry theorem.
 Elad Aigner-Horev,
 The K$\ddot{o}$nig-Egerv$\acute{a}$ry theorem.
 \\\texttt{http://www.elad-horev.org/Expositions/Adjacency\_Matrix.pdf}
+
+\bibitem{determinant}
+Determinant.
+\\\texttt{https://en.wikipedia.org/wiki/Determinant}
+
 \end{thebibliography}
 
 \end{document}
