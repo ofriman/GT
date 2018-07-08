@@ -297,10 +297,21 @@ Let $M$ be a real symmetric matrix. Then $M$ is irreducible if and only if $G^M$
 \end{problem}
 
 \begin{proof}
- $M$ is irreducible $\rightarrow$  $G^M$ is connected.\\
- Assume $M$ is reducible, then there is non-trivial partition $U\cup W = [n]$ such that $M_{i,j} = 0$ for all $(i,j)\in U \times W$. From symmetry  $M_{j,i} = 0$. Then there will be no edges in $G^M$ between element in $U$ and element in $W$ and because there is non-trivial partition $U$ and $W$ can not be empty, so $G^M$ must be disconnect.
+ $M$ is irreducible $\rightarrow$  $G^M$ is connected.
+ Assume $M$ is reducible, then by \cite{connectivity_spec} there is non-trivial partition $U\cup W = [n]$ such that $M_{i,j} = 0$ for all $(i,j)\in U \times W$ .
+ Recall that $M$ is symmetric so  $M_{j,i} = 0$. Notice that there will be no edges in $G^M$ between elements in $U$ and elements in $W$,  so $G^M$ must be disconnect.
 On the other hand,  $G^M$ is connected $\rightarrow$ $M$ is irreducible.
-Assume $G^M$ is connected, then there is path between every two vertices, and so there is no non-trivial partition so $M$ must be irreducible.
+Assume $G^M$ is disconnected, and let $C_1, \ldots, C_{c(G^M)}$ denote the connected components of $G^M$ Then $G^M$ has the form
+\begin{equation*}
+\begin{pmatrix}
+C_1 & 0 &  \cdots & 0 \\ 
+0 & C_2 &  \cdots & 0 \\
+\vdots & \vdots & \ddots &\vdots \\
+0 & 0 & \cdots & C_{c(G^M)} \\ 
+\end{pmatrix}
+\end{equation*}
+Notice that between any two vertices $v, u \in V(G^M)$ where $v \in C_i$ and $u \in C_j$ such that $i \neq j$ there is no $u-v$ walk,
+it follow that $M$ is reducible. 
 \end{proof}
 
 \begin{problem}{3.4}\label{problem3.4}
@@ -333,6 +344,11 @@ The K$\ddot{o}$nig-Egerv$\acute{a}$ry theorem.
 \bibitem{determinant}
 Determinant.
 \\\texttt{https://en.wikipedia.org/wiki/Determinant}
+
+\bibitem{connectivity_spec}
+Elad Aigner-Horev,
+Connectivity and spectrum.
+\\\texttt{http://www.elad-horev.org/Teaching/GT/Assignments/connectivity\_spec.pdf}
 
 \end{thebibliography}
 
