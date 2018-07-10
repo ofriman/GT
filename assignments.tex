@@ -315,11 +315,16 @@ it follow that $M$ is reducible.
 \end{proof}
 
 \begin{problem}{3.4}\label{problem3.4}
-Let $M$ be a real symmetric non-negative matrix of order $n$. Then $M$ is reducible if and only if for every $i,j\in [n]$ there exists a $k > o$ such that $(M^k)_{i,j}>0$.
+Let $M$ be a real symmetric non-negative matrix of order $n$. Then $M$ is irreducible if and only if for every $i,j\in [n]$ there exists a $k > 0$ such that $(M^k)_{i,j}>0$.
 \end{problem}
 
 \begin{proof}
-
+We saw in \ref{problem3.3} that $M$ is irreducible if and only if $G^M$ connected. 
+We know from \cite[Lemma 1]{basic_info_spec} that 
+\begin{equation*}
+A^r_{uv} = \text{number of u − v-r-walks in G}. 
+\end{equation*}
+A graph is connected when there is a path between every pair of vertices \cite{connectivity} and so for any two vertices $u, v \in A(G^M)$ there must be $0 < k \in \N$  such that there exist k − u-v-walks therefore the claim holds.
 \end{proof}
 
 \begin{problem}{3.5}\label{problem3.5}
@@ -349,6 +354,15 @@ Determinant.
 Elad Aigner-Horev,
 Connectivity and spectrum.
 \\\texttt{http://www.elad-horev.org/Teaching/GT/Assignments/connectivity\_spec.pdf}
+
+\bibitem{basic_info_spec}
+Elad Aigner-Horev,
+Information from the spectrum of the adjacency matrix.
+\\\texttt{http://www.elad-horev.org/Expositions/basic\_info\_spec.pdf}
+
+\bibitem{connectivity}
+Connectivity.
+\\\texttt{https://en.wikipedia.org/wiki/Connectivity\_(graph\_theory)}
 
 \end{thebibliography}
 
