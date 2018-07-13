@@ -332,7 +332,48 @@ A graph is connected if and only if its index is simple with a strictly positive
 \end{problem}
 
 \begin{proof}
-
+If a garph is connected then by the Perron-Frobenius Theorem \cite{perron_frobenius} its index is simple with a strictly positive eigenvector.
+On the other hand let $G$ be a graph that  its index is simple with a strictly positive eigenvector.
+We continue by contradiction, let $G$ be a disconnected graph then from \ref{problem3.3} $G$ is reducible, and so $G$ as the form
+$\begin{pmatrix}
+X & 0 \\ 
+0 & Y \\ 
+\end{pmatrix}$
+where $X$ and $Y$ are square matrices. we can write $x = (z_1,z_2)$.
+\begin{equation*}
+\begin{pmatrix}
+X z_1 \\ 
+Y z_2\\ 
+\end{pmatrix} =
+\begin{pmatrix}
+X & 0 \\ 
+0 & Y \\ 
+\end{pmatrix} x = Ax = \lambda x =
+\begin{pmatrix}
+\lambda z_1 \\ 
+\lambda z_2\\ 
+\end{pmatrix}
+\end{equation*}
+recall from our assumption that $z_i > 0$.
+\begin{equation*}
+\begin{pmatrix}
+X \abs{z_1} \\ 
+Y \abs{z_2}\\ 
+\end{pmatrix} =
+\begin{pmatrix}
+X z_1 \\ 
+Y z_2\\ 
+\end{pmatrix} =
+\begin{pmatrix}
+\lambda z_1 \\ 
+\lambda z_2\\ 
+\end{pmatrix} =
+\begin{pmatrix}
+\lambda \abs{z_1} \\ 
+\lambda \abs{z_2}\\ 
+\end{pmatrix}
+\end{equation*}
+Therefore $\lambda$ is an eigenvalue of both $X$ and $Y$, in contradiction to our assumption that it has simple index.
 \end{proof}
 
 \begin{thebibliography}{9} 
@@ -363,6 +404,10 @@ Information from the spectrum of the adjacency matrix.
 \bibitem{connectivity}
 Connectivity.
 \\\texttt{https://en.wikipedia.org/wiki/Connectivity\_(graph\_theory)}
+
+\bibitem{perron_frobenius}
+Elad Aigner-Horev,
+\\\texttt{http://www.elad-horev.org/Expositions/Perron\_Frobenius.pdf}
 
 \end{thebibliography}
 
