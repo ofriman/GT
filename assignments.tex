@@ -422,7 +422,13 @@ Once we have that dim $\mathcal{E}_A(\lambda_1) = 1$ the following is trivial.
 \end{problem}
 
 \begin{proof}
-
+By contradiction assume that $\lambda_1$ has multiplicity bigger than $1$,
+let $x_1,x_2 \in \mathcal{E}_A(\lambda_1)$ be independent (otherwise they will represent the same vector), by \ref{problem4.1} all elements in $x_1,x_2 > 0$ and so we can define a new vector $x$ using $0 \neq c \in \N$ such that $0 \neq x = x_1 - c x_2$ and at least one of $x$ element is equal zero.
+Recall that the matrix product is distributive \cite{matrix_multiplication}, now notice that 
+\begin{equation*}
+ Ax = A(x_1 - c x_2) = Ax_1 - cAx_2= \lambda_1 x_1 - c\lambda_1 x_2 = \lambda_1 (x_1 -cx_2) = \lambda_1 x
+\end{equation*}
+So $x \in  \mathcal{E}_A(\lambda_1)$ in contradiction to \ref{problem4.1} (no zero elements).
 \end{proof}
 
 \begin{problem}{4.3}\label{problem4.3}
@@ -479,6 +485,9 @@ Elad Aigner-Horev,
 Elad Aigner-Horev,
 \\\texttt{http://www.elad-horev.org/Expositions/Rayleigh.pdf}
 
+\bibitem{matrix_multiplication}
+Matrix multiplication.
+\\\texttt{https://en.wikipedia.org/wiki/Matrix\_multiplication}
 \end{thebibliography}
 
 \end{document}
