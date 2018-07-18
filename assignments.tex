@@ -383,7 +383,37 @@ Prove that if $0 \neq x \in \mathcal{E}_A(\lambda_1)$ then $x_i = 0$ for no  $i 
 \end{problem}
 
 \begin{proof}
+Let $x \in \mathcal{E}_A(\lambda_1)$. Then $\lambda_1 = x^TAx$ by the Rayleigh principle \cite{rayleigh}. Set $y$ to be the vector 
+\begin{equation*}
+y_i = \abs{x_i} \text{ for every i } \in [n]
+\end{equation*}
+Notice that
+\begin{equation*}
+\abs{\abs{y}}^2 = \sum_i y_i^2 = \sum_i x_i^2 = \abs{\abs{x}}^2 
+\end{equation*}
 
+Then
+\begin{align*}
+\begin{split}
+\lambda_1 &=  x^TAx \\
+				 &= \sum_{ij} A_{ij}x_ix_j\\
+				 &\leq \sum_{ij} A_{ij}\abs{x_i}\abs{x_j}\\
+				 &= \sum_{ij} A_{ij}y_iy_j\\
+				 &=  y^TAy \\
+				 &\leq \lambda_1
+\end{split}
+\end{align*}
+Recall that $\lambda_1 = \underset{\abs{\abs{x}} = 1}{\text{max }} x^TAx$, therefore if $x$ is in the eigenspace of $\lambda_1$, so is $y$ (as they both got same length, and  $y^TAy \geq x^TAx$).
+It remains to show that $y_i = 0$ for $i \in [n]$. Suppose by contradiction that there is some $y_i = 0$ for $i \in [n]$,
+and $y_j \neq 0$ for some $j \in [n]$, such $j$ must exists because $\abs{\abs{y}} = \abs{\abs{x}} \text{ and }x \neq 0$.
+We saw in \cite{adjacency_matrix} that
+\begin{equation*}
+0 \neq y \in \mathcal{E}_A(\lambda_1) \text{ then } \lambda_1 y_u = \sum_{v\sim u} y_v
+\end{equation*}
+Let P be an $i-j$ path in G. because $y_i = 0$ and $y_j > 0$ there must be an edge in P such that $y_k = 0$ and $y_l > 0$
+\begin{equation*}
+0 = \lambda_1 y_k = \sum_{v\sim k} y_v \geq y_l > 0
+\end{equation*}
 \end{proof}
 
 \begin{problem}{4.2}\label{problem4.2}
@@ -444,6 +474,10 @@ Connectivity.
 \bibitem{perron_frobenius}
 Elad Aigner-Horev,
 \\\texttt{http://www.elad-horev.org/Expositions/Perron\_Frobenius.pdf}
+
+\bibitem{rayleigh}
+Elad Aigner-Horev,
+\\\texttt{http://www.elad-horev.org/Expositions/Rayleigh.pdf}
 
 \end{thebibliography}
 
