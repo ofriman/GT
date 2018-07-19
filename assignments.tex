@@ -33,16 +33,13 @@
 
 \section{Total unimodularity and incidence matrices}
 
-A square matrix $M$ is said to be unimodular if det $M\in \{-1, 1\}$. A matrix $M$ (not necessarily
-square) is said to be totally unimodular if each square submatrix $N$ of $M$ satisfies det $N \in \{-1, 0, 1\}$.
-
 \begin{problem}{1.1}\label{problem1.1}
 Let $G$ be an undirected graph and let $\sigma$ be an orientation of its edges. Prove that
 $\mathcal{Q}(G^\sigma)$ is totally unimodular.
 \end{problem}
 
 \begin{proof}
-Let $N_{k\times k}$ be a square submatrix of $\mathcal{Q}(G^\sigma)$. We proceed by induction on $N$. For the base case let $k = 1$, the determinant of such matrix is the number itself. Suppose now that the theorem holds up to $k=n$. Here we consider cases:
+Let $N_{k\times k}$ be a square submatrix of $\mathcal{Q}(G^\sigma)$. We proceed by induction on $N$. For the base case $k = 1$, the determinant of such matrix is the number itself (-1, 0, 1). Suppose now that the theorem holds up to $k=n$. Here we consider cases:
 \begin{enumerate}[label=(\alph*)]
 \item $N$ contain at least one column or row $c_i$ containing only zero elements. The determinant of $N$ can be computed by using the Laplace expansion along $c_i$ which will give us zero.
 \item $N$ contain at least one column or row $c_i$ containing only one element $e_j$ not equal zero. The determinant of $N$ can be computed by using the Laplace expansion along $c_i$ which will give us $(-1)^{i+ 1} * e_j * det(N_{i,j})$ where $N_{i,j}$ is submatrix of $N$, from the induction hypothesis $det(N_{i,j}) \in\{-1, 0, 1\}$ and $e_j \in\{-1, 1\}$ therefore the theorem holds.
