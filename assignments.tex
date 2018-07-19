@@ -243,11 +243,11 @@ A(G) - \lambda I_{\abs{V(G)}} & 0 \\
 \end{equation*}
 For square matrices A and B of equal size, $\det(AB)=\det(A)\det(B)$ \cite{determinant}.
 Lets calculate the spectrum of $A(G\cup H)$ 
-\begin{multline*}
+\begin{align*}
 \begin{vmatrix}
 A(G) - \lambda I_{\abs{V(G)}} & 0 \\ 
 0             & A(H) - \lambda I_{\abs{V(H)}} \\
-\end{vmatrix} =
+\end{vmatrix} &=
 \begin{vmatrix}
 A(G) - \lambda I_{\abs{V(G)}} & 0 \\ 
 0             &  I_{\abs{V(H)}} \\
@@ -255,15 +255,14 @@ A(G) - \lambda I_{\abs{V(G)}} & 0 \\
 \begin{vmatrix}
  I_{\abs{V(G)}} & 0 \\ 
 0             & A(H) - \lambda I_{\abs{V(H)}} \\
-\end{vmatrix} =\\
+\end{vmatrix} \\&=
 \begin{vmatrix}
 A(G) - \lambda I_{\abs{V(G)}}\\
 \end{vmatrix}
 \begin{vmatrix}
 A(H) - \lambda I_{\abs{V(H)}} \\
 \end{vmatrix}
-\end{multline*}
-
+\end{align*}
 \end{proof}
 
 \begin{problem}{3.2}\label{problem3.2}
@@ -281,7 +280,7 @@ A  	& B \\
 \begin{equation*}
 (P^{-1}LP)_{i,j} = (P^{T}LP)_{i,j} = \Sigma_{u=1}^n (\Sigma_{k=1}^n P^T_{i,k} L_{k,u}) P_{u,j} 
 \end{equation*}
-Notice that $i$ must equal $j$ to have a chance to not equal zero, therefore the only case is for $B$ to be equal to the zero matrix but we know that $L$ is irreducible therefore the claim holds.
+Notice that $i$ must equal $j$ for the element to have a chance to not equal zero, therefore the only case is for $B$ to equal to the zero matrix, but we know that $L$ is irreducible therefore the claim holds.
 \end{proof}
 
 \begin{problem}{3.3}\label{problem3.3}
@@ -316,7 +315,7 @@ We know from \cite[Lemma 1]{basic_info_spec} that
 \begin{equation*}
 A^r_{uv} = \text{number of u − v-r-walks in G}. 
 \end{equation*}
-A graph is connected when there is a path between every pair of vertices \cite{connectivity} and so for any two vertices $u, v \in A(G^M)$ there must be $0 < k \in \N$  such that there exist k − u-v-walks therefore the claim holds.
+A graph is connected when there is a path between every pair of vertices \cite{connectivity}, and so for any two vertices $u, v \in A(G^M)$ there must be $0 < k \in \N$ such that there exist k − u-v-walks, therefore the claim holds.
 \end{proof}
 
 \begin{problem}{3.5}\label{problem3.5}
@@ -324,9 +323,9 @@ A graph is connected if and only if its index is simple with a strictly positive
 \end{problem}
 
 \begin{proof}
-If a garph is connected then by the Perron-Frobenius Theorem \cite{perron_frobenius} its index is simple with a strictly positive eigenvector.
-On the other hand let $G$ be a graph that  its index is simple with a strictly positive eigenvector.
-We continue by contradiction, let $G$ be a disconnected graph then from \ref{problem3.3} $G$ is reducible, and so $G$ as the form
+If a garph is connected, then by the Perron-Frobenius Theorem \cite{perron_frobenius} its index is simple with a strictly positive eigenvector.
+On the other hand, let $G$ be a graph that has simple index with a strictly positive eigenvector.
+We continue by contradiction, let $G$ be a disconnected graph, then from \ref{problem3.3} $G$ is reducible, and so $G$ as the form
 $\begin{pmatrix}
 X & 0 \\ 
 0 & Y \\ 
@@ -409,12 +408,11 @@ Let P be an $i-j$ path in G. because $y_i = 0$ and $y_j > 0$ there must be an ed
 \end{proof}
 
 \begin{problem}{4.2}\label{problem4.2}
-Use the assertion of Problem \ref{problem4.1} in order to prove that $\lambda_1$ has multiplicity $1$
-Once we have that dim $\mathcal{E}_A(\lambda_1) = 1$ the following is trivial.
+Use the assertion of Problem \ref{problem4.1} in order to prove that $\lambda_1$ has multiplicity $1$.
 \end{problem}
 
 \begin{proof}
-By contradiction assume that $\lambda_1$ has multiplicity bigger than $1$,
+By contradiction, assume that $\lambda_1$ has multiplicity bigger than $1$,
 let $x_1,x_2 \in \mathcal{E}_A(\lambda_1)$ be independent (otherwise they will represent the same vector), by \ref{problem4.1} all elements in $x_1,x_2 > 0$ and so we can define a new vector $x$ using $0 \neq c \in \N$ such that $0 \neq x = x_1 - c x_2$ and at least one of $x$ element is equal zero.
 Recall that the matrix product is distributive \cite{matrix_multiplication}, now notice that 
 \begin{equation*}
@@ -441,8 +439,8 @@ Prove that $\lambda = \lambda_1$.
 \end{problem}
 
 \begin{proof}
-Let $x_1 \in \mathcal{E}_A(\lambda_1)$ , from \ref{problem4.2} we know that the eigenspace of $\lambda_1$ has multiplicity 1  and from \cite{perron_frobenius} we know that the eigenspace of $\lambda_1$ contain a vector that all of his elements are bigger than zero.
-now assume that $\lambda \neq \lambda_1$, from \cite{orthogonal_eigenvectors} we know that all of the eigenvectors are orthogonal and so $x^Tx_1 = 0$ therefore x must contain negative value.
+Let $x_1 \in \mathcal{E}_A(\lambda_1)$ , from \ref{problem4.2} we know that the eigenspace of $\lambda_1$ has multiplicity 1,  and from \cite{perron_frobenius} we know that the eigenspace of $\lambda_1$ contain a vector that all of his elements are bigger than zero.
+Now assume that $\lambda \neq \lambda_1$, from \cite{orthogonal_eigenvectors} we know that all of the eigenvectors are orthogonal and so $x^Tx_1 = 0$, therefore x must contain negative value.
 \end{proof}
 
 \begin{thebibliography}{9} 
@@ -457,7 +455,7 @@ Graph is Bipartite iff No Odd Cycles
 
 \bibitem{adjacency_matrix}
 Elad Aigner-Horev,
-The K$\ddot{o}$nig-Egerv$\acute{a}$ry theorem.
+The adjacency matrix of a graph.
 \\\texttt{http://www.elad-horev.org/Expositions/Adjacency\_Matrix.pdf}
 
 \bibitem{determinant}
