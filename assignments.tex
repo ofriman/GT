@@ -39,7 +39,7 @@ $\mathcal{Q}(G^\sigma)$ is totally unimodular.
 \end{problem}
 
 \begin{proof}
-Let $N_{k\times k}$ be a square submatrix of $\mathcal{Q}(G^\sigma)$. We proceed by induction on $N$. For the base case $k = 1$, the determinant of such matrix is the number itself (-1, 0, 1). Suppose now that the theorem holds up to $k=n$. Here we consider cases:
+Let $N_{k\times k}$ be a square submatrix of $\mathcal{Q}(G^\sigma)$. We proceed by induction on $N$. For the base case $k = 1$, the determinant of such matrix is the number itself. Suppose now that the theorem holds up to $k=n$. Here we consider cases:
 \begin{enumerate}[label=(\alph*)]
 \item $N$ contain at least one column or row $c_i$ containing only zero elements. The determinant of $N$ can be computed by using the Laplace expansion along $c_i$ which will give us zero.
 \item $N$ contain at least one column or row $c_i$ containing only one element $e_j$ not equal zero. The determinant of $N$ can be computed by using the Laplace expansion along $c_i$ which will give us $(-1)^{i+ 1} * e_j * det(N_{i,j})$ where $N_{i,j}$ is submatrix of $N$, from the induction hypothesis $det(N_{i,j}) \in\{-1, 0, 1\}$ and $e_j \in\{-1, 1\}$ therefore the theorem holds.
@@ -59,9 +59,8 @@ det M(C_n) =
 	 \end{cases}
 \end{equation*}
 \begin{proof}
-\begin{multline*}
-  det M(C_n) = 
-  \underbrace {
+\begin{flalign*}
+  det M(C_n) &= 
 \begin{vmatrix}
 1 & 0 &  \cdots & 1 \\ 
 1 & 1 &  \cdots & 0 \\
@@ -70,9 +69,7 @@ det M(C_n) =
 0 & 0 & \cdots & 0 \\ 
 0 & 0 & \cdots & 1 \\ 
 \end{vmatrix}_{n\times n}
-}_\text{we will expand along first row }
-= \\
-\underbrace {
+  \quad\text{\tiny{(expansion along first row)}} \\  &=
 \begin{vmatrix}
 1 & 0 &  \cdots & 0 \\ 
 1 & 1 &  \cdots & 0 \\
@@ -81,9 +78,7 @@ det M(C_n) =
 0 & 0 & \cdots & 0 \\ 
 0 & 0 & \cdots & 1 \\ 
 \end{vmatrix}_{n - 1 \times n - 1}
-}_\text{we will expand along first row }
  + (-1)^{n+1}
- \underbrace {
 \begin{vmatrix}
 1 & 1 &  \cdots & 0 \\ 
 0 & 1 &  \cdots & 0 \\
@@ -92,8 +87,8 @@ det M(C_n) =
 0 & 0 & \cdots & 1 \\ 
 0 & 0 & \cdots & 1 \\ 
 \end{vmatrix}_{n - 1 \times n - 1}
-}_\text{we will expand along first column }
-= \\ \cdots =
+  \quad\text{\tiny{(expansion along first row and first column)}}
+\\ &= \cdots =
 \begin{vmatrix}
 1 & 0 \\ 
 1 & 1 \\ 
@@ -104,20 +99,20 @@ det M(C_n) =
 0 & 1 \\ 
 \end{vmatrix}
 = 1 + (-1)^{n+1} 
-\end{multline*}
+\end{flalign*}
 \end{proof}
 
 \item Use the first part of this problem to prove that an undirected graph $G$ is bipartite if and if $M(G)$ is totally unimodular.
 \begin{proof}
 $G$ is bipartite $\rightarrow$ $M(G)$ is totally unimodular.\\ 
-Let $G$ be bipartite graph and Let $N_{k\times k}$ be a square submatrix of $M(G)$. We proceed by induction on $N$. For the base case let $k = 1$, the determinant of such matrix is the number itself. Suppose now that the theorem holds up to $k=n$. Here we consider cases:
+Let $G$ be bipartite graph and Let $N_{k\times k}$ be a square submatrix of $M(G)$. We proceed by induction on $N$. For the base case $k = 1$, the determinant of such matrix is the number itself. Suppose now that the theorem holds up to $k=n$. Here we consider cases:
 \begin{enumerate}[label=(\alph*)]
 \item $N$ contain at least one column or row $c_i$ containing only zero elements. The determinant of $N$ can be computed by using the Laplace expansion along $c_i$ which will give us zero.
 \item $N$ contain at least one column or row $c_i$ containing only one element equal 1. The determinant of $N$ can be computed by using the Laplace expansion along $c_i$ which will give us $(-1)^{i+ 1} * det(N_{i,j})$ where $N_{i,j}$ is submatrix of $N$, from the induction hypothesis $det(N_{i,j}) \in\{-1, 0, 1\}$ therefore the theorem holds.
-\item $N$ is incidence matrix, we know from \cite[Theorem 10]{konig_egervary}  that the rk $N \leq n - 1$ therefore the columns are dependent and the determinant is equal zero.
+\item $N$ is incidence matrix, we know from \cite[Theorem 10]{konig_egervary}  that the rk $N \leq n - 1$, therefore the columns are dependent and the determinant is equal zero.
 \end{enumerate}
 $M(G)$ is totally unimodular $\rightarrow$ $G$ is bipartite.\\ 
-From K$\ddot{o}$nig Theorem, we know that a graph is bipartite if and only if it has no odd cycle. Also we saw in \ref{problem1.2.1} that  totally unimodular matrix cannot contain odd cycle therefore it most be bipartite.
+by \ref{problem1.2.1} totally unimodular matrix cannot contain odd cycle, and by \cite{bipartite_odd_cycles} if $G$ has no odd cycles then $G$ is bipartite.
 \end{proof}
 \end{enumerate}
 \end{problem}
@@ -455,6 +450,10 @@ now assume that $\lambda \neq \lambda_1$, from \cite{orthogonal_eigenvectors} we
 Elad Aigner-Horev,
 The K$\ddot{o}$nig-Egerv$\acute{a}$ry theorem.
 \\\texttt{http://www.elad-horev.org/Expositions/Konig\_Egervary.pdf}
+
+\bibitem{bipartite_odd_cycles}
+Graph is Bipartite iff No Odd Cycles
+\\\texttt{https://proofwiki.org/wiki/Graph\_is\_Bipartite\_iff\_No\_Odd\_Cycles}
 
 \bibitem{adjacency_matrix}
 Elad Aigner-Horev,
