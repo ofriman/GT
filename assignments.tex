@@ -462,7 +462,17 @@ Assume that  $x \rightarrow y$, then $y$ is accessible from $x$, so for some int
 \begin{equation*}
 (P + P^2 + \cdots + P^{\abs{\Omega}})_{xy} =  P_{xy} + P^2_{xy} + \cdots +\underbrace{ P^t_{xy}}_{> 0} + \cdots +  P^{\abs{\Omega}}_{xy} > 0
 \end{equation*}
-\end{proof}								   
+\end{proof}				
+
+\begin{problem}{5.2}\label{problem5.2}
+Prove that $M$ is irreducible if and only if  $(I + P + P^2 + \cdots + P^{\abs{\Omega}})_{xy} > 0$ for every $x,y \in \Omega$.
+\end{problem}
+
+\begin{proof}
+Assume $M$ is irreducible, therefore all states are pairwise accessible from one another  \cite{classifying_markov}. Let $x,y \in \Omega$ and $y$ is accessible from $x$ from above \ref{problem5.1} we know that $(P + P^2 + \cdots + P^{\abs{\Omega}})_{xy} > 0$ and so the claim hold for this direction.
+On the other hand assume $(I + P + P^2 + \cdots + P^{\abs{\Omega}})_{xy} > 0$ for every $x,y \in \Omega$, so for every $x$ and $y$ there is  some integer $t$ such that $P^t_{xy} > 0$ and therefore $y$ is accessible from $x$.
+\end{proof}			
+				   
 \begin{thebibliography}{9} 
 \bibitem{konig_egervary}
 Elad Aigner-Horev,
