@@ -501,7 +501,52 @@ State 3 is not accessible from state 4
 \end{equation*}
 Therefore $M$ is not irreducible and has classes $[1,2],[3],[4]$.
 \end{proof}			
+
+\begin{problem}{5.4}\label{problem5.4}
+Consider the chain whose states are given by the set $\{1, 2, 3, 4, 5, 6\}$ and whose
+transition matrix is
+\begin{equation*}
+\begin{bmatrix}
+0    & 1    & 0    & 0     & 0    & 0 \\
+0.4 & 0.6 & 0    & 0     & 0    & 0 \\
+0.3 & 0    & 0.4 & 0.2  & 0.1 & 0 \\
+0    & 0    & 0    & 0.3  & 0.7 & 0 \\
+0    & 0    & 0    & 0.5  & 0    & 0.5 \\
+0    & 0    & 0    & 0.3  & 0    & 0.7 \\
+\end{bmatrix}
+\end{equation*}
+Determine the equivalence classes of this chain. State which are transient and which are recurrent?
+\end{problem}
+
+\begin{proof}
+
+State 2 is accessible from state 1 and state 1 is accessible from state 2
+\begin{equation*}
+P^1_{1,2} =1 \text{, } P^1_{2, 1} = 0.4
+\end{equation*}
+State 5 is accessible from state 4
+\begin{equation*}
+P^1_{4,5} =0.7
+\end{equation*}
+State 4 and state 6 is accessible from state 5
+\begin{equation*}
+P^1_{5,4} =0.5 \text{, } P^1_{5, 6} = 0.5
+\end{equation*}
+State 4 is accessible from state 6
+\begin{equation*}
+P^1_{6,4} =0.3
+\end{equation*}
+Let $x \in \{1,2,4,5,6\}$ then
+\begin{equation*}
+r_x = Pr[M\text{ revisits }x \mid X_0 = x] =1
+\end{equation*}
+$Pr[N_3 > 1] = 0$ and so this state is transient.
+So, [1,2] recurrent class
+[3] transient class
+[4,5,6] recurrent class
+\end{proof}			
 				   
+				   				   
 \begin{thebibliography}{9} 
 \bibitem{konig_egervary}
 Elad Aigner-Horev,
