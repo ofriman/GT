@@ -471,6 +471,35 @@ Prove that $M$ is irreducible if and only if  $(I + P + P^2 + \cdots + P^{\abs{\
 \begin{proof}
 Assume $M$ is irreducible, therefore all states are pairwise accessible from one another  \cite{classifying_markov}. Let $x,y \in \Omega$ and $y$ is accessible from $x$ from above \ref{problem5.1} we know that $(P + P^2 + \cdots + P^{\abs{\Omega}})_{xy} > 0$ and so the claim hold for this direction.
 On the other hand assume $(I + P + P^2 + \cdots + P^{\abs{\Omega}})_{xy} > 0$ for every $x,y \in \Omega$, so for every $x$ and $y$ there is  some integer $t$ such that $P^t_{xy} > 0$ and therefore $y$ is accessible from $x$.
+\end{proof}		
+
+\begin{problem}{5.3}\label{problem5.3}
+Consider the chain whose state space is $\{1,2,3,4\}$ and whose transition matrix is
+\begin{equation*}
+\begin{bmatrix}
+\frac{1}{2} & \frac{1}{2} & 0 & 0 \\
+\frac{1}{2} & \frac{1}{2} & 0 & 0 \\
+0                & 0                &  \frac{1}{4} &  \frac{3}{4} \\
+0				  & 0 & 0 & 1\\
+\end{bmatrix}
+\end{equation*}
+Is this chain irreducible? If not what are its classes?
+\end{problem}
+
+\begin{proof}
+State $3$ and $4$ are not accessible from $1$ and $2$.
+\begin{equation*}
+(I + P + P^2 + \cdots + P^{\abs{\Omega}})_{\{1,2\},\{3,4\}} =\sum_{j = 1}^\Omega = P^j_{\{1,2\},\{3,4,\}} = 0.
+\end{equation*}
+State 2 is accessible from state 1 and state 1 is accessible from state 2
+\begin{equation*}
+P^1_{1,2} = \frac{1}{2} \text{, } P^1_{2, 1} = \frac{1}{2}
+\end{equation*}
+State 3 is not accessible from state 4
+\begin{equation*}
+(I + P + P^2 + \cdots + P^{\abs{\Omega}})_{4,3} =\sum_{j = 1}^\Omega = P^j_{4,3} = 0.
+\end{equation*}
+Therefore $M$ is not irreducible and has classes $[1,2],[3],[4]$.
 \end{proof}			
 				   
 \begin{thebibliography}{9} 
