@@ -451,6 +451,18 @@ Let $x_1 \in \mathcal{E}_A(\lambda_1)$ , from \ref{problem4.2} we know that the 
 Now assume that $\lambda \neq \lambda_1$, from \cite{orthogonal_eigenvectors} we know that all of the eigenvectors are orthogonal and so $x^Tx_1 = 0$, therefore x must contain negative value.
 \end{proof}
 
+\section{Fundamental properties of Markov chains}
+
+\begin{problem}{5.1}\label{problem5.1}
+Prove that $x \rightarrow y$ if and only if $(P + P^2 + \cdots + P^{\abs{\Omega}})_{xy} > 0$.
+\end{problem}
+
+\begin{proof}
+Assume that  $x \rightarrow y$, then $y$ is accessible from $x$, so for some integer $t$, $P^t_{xy} > 0$ \cite{classifying_markov}.
+\begin{equation*}
+(P + P^2 + \cdots + P^{\abs{\Omega}})_{xy} =  P_{xy} + P^2_{xy} + \cdots +\underbrace{ P^t_{xy}}_{> 0} + \cdots +  P^{\abs{\Omega}}_{xy} > 0
+\end{equation*}
+\end{proof}								   
 \begin{thebibliography}{9} 
 \bibitem{konig_egervary}
 Elad Aigner-Horev,
@@ -501,6 +513,10 @@ Eigenvectors of real symmetric matrices are orthogonal.
 \begin{scriptsize}
 \\\texttt{https://math.stackexchange.com/questions/82467/eigenvectors-of-real-symmetric-matrices-are-orthogonal}
 \end{scriptsize}
-\end{thebibliography}
 
+\bibitem{classifying_markov}
+Elad Aigner-Horev,
+Classifying states of Markov chains.
+\\\texttt{http://www.elad-horev.org/Expositions/Markov1\_5.pdf}
+\end{thebibliography}
 \end{document}
