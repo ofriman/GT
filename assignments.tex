@@ -1,7 +1,7 @@
 \documentclass[a4paper, 11pt, oneside]{article}
 
  \usepackage[margin=1in]{geometry} 
-\usepackage{amsmath,amsthm,amssymb, float, enumitem}
+\usepackage{amsmath,amsthm,amssymb, float, enumitem,centernot}
  \usepackage[hidelinks]{hyperref}
 \usepackage{xcolor}
 \hypersetup{
@@ -547,7 +547,54 @@ r_3 = Pr[M\text{ revisits }3 \mid X_0 = 3] < 1
 [4,5,6] recurrent class
 \end{proof}			
 				   
-				   				   
+\begin{problem}{5.5}\label{problem5.5}
+Prove that the two definitions given above for closed sets are equivalent.
+\end{problem}
+
+\begin{proof}
+\begin{equation*}
+(x \centernot\rightarrow y) \underbrace{\leftrightarrow}_{\ref{problem5.1}} (P + P^2 + \cdots + P^{\abs{\Omega}})_{xy} = 0 \rightarrow P_{xy} = 0
+\end{equation*}
+\color{red} 
+missing second direction.
+\end{proof}	
+
+\begin{problem}{5.6}\label{problem5.6}
+Prove that if $x$ is essential and $x \rightarrow y$ then $y$ is essential.
+\end{problem}
+
+\begin{proof}
+
+\end{proof}	
+
+				   
+\begin{problem}{5.7}\label{problem5.7}
+Prove that every finite chain has at least one essential class.
+\end{problem}
+
+\begin{proof}
+
+\end{proof}	
+
+				   
+\begin{problem}{5.8}\label{problem5.8}
+Can an essential state be transient?
+\end{problem}
+
+\begin{proof}
+
+\end{proof}	
+
+				   
+\begin{problem}{5.9}\label{problem5.9}
+Prove Lemma 1. Use fundamental gcd properties to first prove that if $x$ is aperiodic
+then there exist $n, m \in T_x$ such that $m - n = 1$
+\end{problem}
+
+\begin{proof}
+
+\end{proof}		
+   
 \begin{thebibliography}{9} 
 \bibitem{konig_egervary}
 Elad Aigner-Horev,
