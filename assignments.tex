@@ -469,7 +469,7 @@ Prove that $M$ is irreducible if and only if  $(I + P + P^2 + \cdots + P^{\abs{\
 \end{problem}
 
 \begin{proof}
-Assume $M$ is irreducible, therefore all states are pairwise accessible from one another  \cite{classifying_markov}. Let $x,y \in \Omega$ and $y$ is accessible from $x$ from above \ref{problem5.1} we know that $(P + P^2 + \cdots + P^{\abs{\Omega}})_{xy} > 0$ and so the claim hold for this direction.
+Assume $M$ is irreducible, therefore all states are pairwise accessible from one another  \cite{classifying_markov}. Let $x,y \in \Omega$ and $y$ is accessible from $x$,  by \ref{problem5.1} we know that $(P + P^2 + \cdots + P^{\abs{\Omega}})_{xy} > 0$ and so the claim hold for this direction.
 On the other hand assume $(I + P + P^2 + \cdots + P^{\abs{\Omega}})_{xy} > 0$ for every $x,y \in \Omega$, so for every $x$ and $y$ there is  some integer $t$ such that $P^t_{xy} > 0$ and therefore $y$ is accessible from $x$.
 \end{proof}		
 
@@ -487,18 +487,16 @@ Is this chain irreducible? If not what are its classes?
 \end{problem}
 
 \begin{proof}
-State $3$ and $4$ are not accessible from $1$ and $2$.
-\begin{equation*}
-(I + P + P^2 + \cdots + P^{\abs{\Omega}})_{\{1,2\},\{3,4\}} =\sum_{j = 1}^\Omega = P^j_{\{1,2\},\{3,4,\}} = 0.
-\end{equation*}
-State 2 is accessible from state 1 and state 1 is accessible from state 2
+$1, 2$ states are accessible from one another $1 \leftrightarrow 2$
 \begin{equation*}
 P^1_{1,2} = \frac{1}{2} \text{, } P^1_{2, 1} = \frac{1}{2}
 \end{equation*}
-State 3 is not accessible from state 4
+
+$1,2, 3$ states are not accessible from state $4$. Let $x \in \{1, 2, 3\}$
 \begin{equation*}
-(I + P + P^2 + \cdots + P^{\abs{\Omega}})_{4,3} =\sum_{j = 1}^\Omega = P^j_{4,3} = 0.
+ (I + P + P^2 + \cdots + P^{\abs{\Omega}})_{4,x} = \underbrace{I_{4,x}}_{=0}  + \sum_{j = 1}^{\abs{\Omega}} P^j_{4,x} = 0.
 \end{equation*}
+
 Therefore $M$ is not irreducible and has classes $[1,2],[3],[4]$.
 \end{proof}			
 
@@ -520,7 +518,7 @@ Determine the equivalence classes of this chain. State which are transient and w
 
 \begin{proof}
 
-State 2 is accessible from state 1 and state 1 is accessible from state 2
+$1, 2$ states are accessible from one another $1 \leftrightarrow 2$
 \begin{equation*}
 P^1_{1,2} =1 \text{, } P^1_{2, 1} = 0.4
 \end{equation*}
@@ -536,13 +534,16 @@ State 4 is accessible from state 6
 \begin{equation*}
 P^1_{6,4} =0.3
 \end{equation*}
-Let $x \in \{1,2,4,5,6\}$ then
+Notice that those states are recurrent, let $x \in \{1,2,4,5,6\}$ then
 \begin{equation*}
 r_x = Pr[M\text{ revisits }x \mid X_0 = x] =1
 \end{equation*}
-$Pr[N_3 > 1] = 0$ and so this state is transient.
-So, [1,2] recurrent class
-[3] transient class
+Now lets look at state $3$
+\begin{equation*}
+r_3 = Pr[M\text{ revisits }3 \mid X_0 = 3] < 1
+\end{equation*}
+[1,2] recurrent class,
+[3] transient class,
 [4,5,6] recurrent class
 \end{proof}			
 				   
