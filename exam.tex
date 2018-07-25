@@ -107,21 +107,30 @@ Prove that $\lambda_1(H) < \lambda_1(G)$.
 \begin{proof}
 
   \begin{enumerate}[(a)]
-  \item \label{problem3.1}
-  Let $H$ be a connected spanning subgraph of a (connected) graph $G (\text{i.e., }V (H) =
-V (G))$.
-
-Same argument as \cite[Seva]{eigenvalue_subgraph},
- without loss of generality, $H$ is obtained from $G$ by deleting some edges (and keeping all vertices). Let $A(G)$ and $A(H)$ denote the adjacency matrices, and let $x'$ be an eigenvector of $H$, belonging to the eigenvalue $\lambda_1(H)$, such that all coordinates of $x'$ are non-negative. We have then
-\begin{equation*}
-\lambda_1(H) = \frac{\langle x', A(H)x' \rangle }{\abs{\abs{x'}}^2} \leq  \frac{\langle x', A(G)x' \rangle }{\abs{\abs{x'}}^2}  \leq  \underset{x \neq 0}{sup} \frac{\langle x, A(G)x \rangle }{\abs{\abs{x}}^2}  = \lambda_1(G)
-\end{equation*}
-  indeed, if all coordinates of $x'$ are strictly positive, then the first inequality is strict, and if $x'$ has zero coordinates, then the second inequality is strict (by Perron-Frobenius \cite[Theorem 1]{perron_frobenius}, which says that the supremum is attained on a vector with all coordinates distinct from 0).
   
-  \item 
+  
+  \item\label{problem3.1}
+   \cite[Proposition 1.3.10]{introduction-spectra} prove this question.
+  
+\begin{quote}{\cite[Proposition 1.3.10]{introduction-spectra}}{If $G - uv$ is the graph obtained from a connected graph $G$ by deleting the edge $uv$, then $\lambda_1(G-uv) < \lambda_1(G)$.}
+\hfill\break
+Proof.
+Let $x = 
+\begin{pmatrix}
+x_1 & \ldots & x_n
+\end{pmatrix}^T
+$ be a non-negative unit eigenvector of $G - uv$ corresponding to $\lambda_1(G - uv)$. Then
+ \begin{equation*}
+\lambda_1(G - uv) = x^TA(G-uv)x \leq x^TA(G)x \leq \lambda_1(G)
+\end{equation*}
+if $\lambda_1(G -uv) = \lambda_1(G)$ then $x$ is the principal eigenvector of $G$ and hence has no zero entries. Now $x^TA(G-uv)x = x^TA(G)x - 2x_ux_v  < \lambda_1 (G - uv)$, a contradiction.
+\end{quote}
 
+  \item
+  \cite[Proposition 1.3.9]{introduction-spectra} prove this question.
 \begin{quote}{\cite[Proposition 1.3.9]{introduction-spectra}}{For any vertex $u$ of a connected graph $G$, we have $\lambda_1(G-u) < \lambda_1(G)$.}
 \hfill\break
+Proof.
 Let $A = 
 \begin{pmatrix}
 A' & r  \\
@@ -133,8 +142,6 @@ x \\
 \end{pmatrix}$
 then $y^Ty = 1$ and $\lambda_1(G - u) = y^TAy \leq \lambda_1(G)$. if equality holds then y is an eigenvector of A corresponding to $\lambda_1(G)$; but this is a contradiction because $y$ has a zero entry.
 \end{quote}
-
-\cite[Proposition 1.3.9]{introduction-spectra} together with the first part of this question \ref{problem3.1}  prove this question.
 \end{enumerate}
 
 
