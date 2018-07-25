@@ -156,8 +156,34 @@ where here $\overline{d}(G)$ is the average degree of G and $\Delta(G)$ is the m
 \end{problem}
 
 \begin{proof}
-
-
+ \cite[Proposition 1.2.2]{laszlo_background} prove this question.
+\begin{quote}{ \cite[Proposition 1.2.2]{laszlo_background}}{For every graph $G$,  
+\begin{equation*}
+max \Big\{ \overline{d}, \sqrt{d_{\text{max}}} \Big\} \leq \lambda_1 \leq d_{\text{max}}
+\end{equation*}}
+\hfill\break
+Proof.
+Let $u = 
+\begin{pmatrix}
+1 / \sqrt{n}, & \ldots &, 1 / \sqrt{n} 
+\end{pmatrix}^T
+$ then 
+\begin{equation*}
+\lambda_1 \geq u^tA_Gu = \frac{1}{n} \sum_{i,j} A_{ij} = \frac{2m}{n} =  \overline{d}
+\end{equation*}
+Let $H$ denote the star with $d_{\text{max}}$ rays. Then $H \subseteq G$, and hence by  \cite[Proposition 1.2.1]{laszlo_background},
+\begin{equation*}
+\lambda_1 (G) \geq \lambda_1(H) = \sqrt{d_{\text{max}}}
+\end{equation*}
+Finally let $v_1$ denote the eigenvalue belonging to $\lambda_1$, and $v_1 = 
+\begin{pmatrix}
+u_{11}, & \ldots &, u_{1n}
+\end{pmatrix}^T$. We may assume that $u_{11} \geq u_{12} \geq \ldots$ Then
+\begin{equation*}
+\lambda_1 v_{11} = \sum^n_{i=1}A_{1i}v_{1i} \leq  \sum^n_{i=1}A_{1i}v_{11} = d_1v_{11} \leq d_{\text{max}}v_{11} 
+\end{equation*}
+and hence $\lambda_1 \leq d_{\text{max}}$
+\end{quote}
 \end{proof}		
 
 \begin{problem}{5}\label{problem5}
@@ -175,10 +201,6 @@ Elad Aigner-Horev,
 The adjacency matrix of a graph.
 \\\texttt{http://www.elad-horev.org/Expositions/Adjacency\_Matrix.pdf}
 
-\bibitem{eigenvalue_subgraph}
-Spectral radius of a proper subgraph.
-\\\texttt{https://mathoverflow.net/questions/69807/spectral-radius-of-a-proper-subgraph}
-
 \bibitem{perron_frobenius}
 Elad Aigner-Horev,
 The Perron-Frobenius theorem for connected graphs.
@@ -187,6 +209,12 @@ The Perron-Frobenius theorem for connected graphs.
 \bibitem{introduction-spectra}
 Dragos Cvetkovic, Peter Rowlinson,
 Introduction-Spectra-Mathematical-Society-Student (Kindle Edition)
+
+\bibitem{laszlo_background}
+laszlo lovasz and Katalin Vesztergombi,
+Background material.
+\\\texttt{https://pdfs.semanticscholar.org/6ba8/74424408264214220c2785d4bdf521a9dd9d.pdf}
+Background material
 \end{thebibliography}
 
 \end{document}
