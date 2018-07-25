@@ -241,6 +241,8 @@ Notice that $0 \leq e_G(X,Y) \leq d \abs{X}$
  
 \end{problem}
 
+\hfill\break
+
  \begin{enumerate}
  \item
  \begin{proof}
@@ -280,12 +282,16 @@ Now we can isolate $e_G(X,Y)$
 e_G(X,Y) & \geq
 -\lambda(G)^2\frac{n}{d}\left( 1 - \frac{\lambda(G)\frac{n}{d}}{n} \right) + \frac{d\left(\lambda(G)\frac{n}{d}\right)^2}{n}   \\ &=
 -\lambda(G)^2\frac{n}{d} + \lambda(G)^3 \frac{n}{d^2} + \lambda(G)^2 \frac{n}{d} \\&=
- \lambda(G)^3 \frac{n}{d^2} \quad\text{( \ref{problem4} )}  \\&\geq
+ \lambda(G)^3 \frac{n}{d^2} \quad\tiny\text{( $\lambda(G) := max_{2\leq i \leq n}\abs{\lambda_i} $ together with \cite[Theorem 1]{perron_frobenius} and \cite[Lemma 13]{basic_spec} implies that $\lambda(G) = d$ )}  \\&\geq
  d n \geq 1
 \end{align*}	
 \end{proof}
  \item
- 
+  \begin{proof}
+
+
+\end{proof}
+
  \item
  \end{enumerate}
 		
@@ -335,6 +341,11 @@ Background material
 Elad Aigner-Horev,
 The adjacency matrix of a graph.
 \\\texttt{http://www.elad-horev.org/Expositions/expander\_mixing\_lemma.pdf}
+
+\bibitem{basic_spec}
+Elad Aigner-Horev,
+Information from the spectrum of the adjacency matrix.
+\\\texttt{http://www.elad-horev.org/Expositions/basic\_info\_spec.pdf}
 \end{thebibliography}
 
 \end{document}
