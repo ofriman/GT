@@ -1,0 +1,71 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb, float, enumitem,centernot}
+ \usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\newtheorem{innercustomthm}{Theorem}
+\newenvironment{theorem}[1]
+  {\renewcommand\theinnercustomthm{#1}\innercustomthm}
+  {\endinnercustomthm}
+  
+  \newtheorem{innercustomprob}{Problem}
+\newenvironment{problem}[1]
+  {\renewcommand\theinnercustomprob{#1}\innercustomprob}
+  {\endinnercustomprob}
+  
+  \newtheorem{innercustomdef}{Definition}
+\newenvironment{definition}[1]
+  {\renewcommand\theinnercustomdef{#1}\innercustomdef}
+  {\endinnercustomdef}
+  
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand\abs[1]{\left|#1\right|}
+\newcommand\imark[2]{\text{i-Mark}{(\{#1\},\{#2\})}}
+\DeclareMathOperator\mex{mex}
+\DeclareMathOperator\opt{opt}
+
+\begin{document}
+
+\title{Final take-home exam}
+\author{Oren Friman 301677613}
+\maketitle
+				   
+\begin{problem}{1}\label{problem1}
+Show how to find the two non-zero eigenvalues of $K_{1,n}$ using the functional
+approach. A natural alternative approach would be to memorise or dig up the spectrum of $K_{n,m}$
+considered here; and then derive the answer from that. This will not be accepted as an answer.
+\end{problem}
+
+\begin{proof}
+We will use \cite[Equation 1]{adjacency_matrix} to find the eigenvalue.
+\begin{equation*}
+\lambda x(u) = \sum_{v \sim u} x(v)
+\end{equation*}
+Now we must take $v_1$ otherwise the sum of the neighbors will be equal zero.
+\begin{equation*}
+\lambda x(v_1) = \sum_{v \sim v_1} x(v)
+\end{equation*}
+We will consider the simplest eigenvector  and we take $x_2 = \ldots = x_{n+1} = 1$.
+\begin{equation*}
+\lambda x_1 = n
+\end{equation*}
+having $\lambda = x_1 = \sqrt{n}$ gives us two eigenvalues $\pm \sqrt{n}$
+
+\end{proof}		
+   
+\begin{thebibliography}{9} 
+\bibitem{adjacency_matrix}
+Elad Aigner-Horev,
+The adjacency matrix of a graph.
+\\\texttt{http://www.elad-horev.org/Expositions/Adjacency\_Matrix.pdf}
+\end{thebibliography}
+\end{document}
