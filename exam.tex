@@ -206,7 +206,29 @@ Let $G$ be a connected $d$-regular $n$-vertex graph and let $\lambda(G) := max_{
 where $o(1)$ is a quantity that goes to zero as $n$ tends to infinity.
 \end{problem}
 \begin{proof}
+We will use \ref{problem5} inequality.
 
+\begin{equation*}
+\left\lvert  e_G(X,Y) - \frac{d\abs{X}\abs{Y}}{n} \right\rvert \leq \lambda(G) \sqrt{  \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} 
+\end{equation*}
+We will isolate $\lambda(G)$
+\begin{equation*}
+\frac{\left\lvert  e_G(X,Y) - \frac{d\abs{X}\abs{Y}}{n} \right\rvert}{\sqrt{  \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} } \leq \lambda(G)
+\end{equation*}
+Recall that $G$ and $\lambda(G)$ are the same as in \ref{problem5}. 
+\begin{align*}
+\lambda(G) \geq &
+\frac{\left\lvert  e_G(X,Y) - \frac{d\abs{X}\abs{Y}}{n} \right\rvert}{\sqrt{  \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }
+\\ = & \sqrt{d}\left(\frac{\left\lvert  e_G(X,Y) - \frac{d\abs{X}\abs{Y}}{n} \right\rvert}{\sqrt{ d \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }\right)
+\end{align*}
+Notice that $0 \leq e_G(X,Y) \leq d \abs{X}$
+\begin{align*}
+\lambda(G) \geq &
+\sqrt{d}\left(\frac{\left\lvert   d \abs{X} - \frac{d\abs{X}\abs{Y}}{n} \right\rvert}{\sqrt{ d \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }\right) \\ = &
+\sqrt{d}\left(\frac{\sqrt{ d \abs{X}} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert}{\sqrt{\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }\right)\\ = &
+\sqrt{d}\left(\frac{\sqrt{ d \abs{X} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert}}{\sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} }\right) \\ \geq & 
+\sqrt{d} \left(1 - 	\frac{1}{\sqrt{n}}\right) \quad \text{(???)}
+\end{align*}
 \end{proof}		
 
  \begin{problem}{7}\label{problem7}
