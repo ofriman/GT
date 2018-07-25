@@ -11,6 +11,18 @@
     citecolor={blue!50!black},
     urlcolor={blue!80!black}
 }
+\makeatletter
+\def\moverlay{\mathpalette\mov@rlay}
+\def\mov@rlay#1#2{\leavevmode\vtop{%
+   \baselineskip\z@skip \lineskiplimit-\maxdimen
+   \ialign{\hfil$\m@th#1##$\hfil\cr#2\crcr}}}
+\newcommand{\charfusion}[3][\mathord]{
+    #1{\ifx#1\mathop\vphantom{#2}\fi
+        \mathpalette\mov@rlay{#2\cr#3}
+      }
+    \ifx#1\mathop\expandafter\displaylimits\fi}
+\makeatother
+\newcommand{\bigcupdot}{\charfusion[\mathop]{\bigcup}{\cdot}}
 
 \let\oldquote\quote
 \let\endoldquote\endquote
@@ -289,10 +301,16 @@ e_G(X,Y) & \geq
  \item
   \begin{proof}
 
+	\color{red} maybe same as above
 
 \end{proof}
 
  \item
+   \begin{proof}
+
+		\color{red} no idea
+
+\end{proof}
  \end{enumerate}
 		
 
@@ -308,9 +326,32 @@ d - \lambda(G) \geq \frac{k^2}{2d}
 \end{problem}
 \begin{proof}
 
+\color{red} no idea
+
 \end{proof}		
 
  \begin{problem}{9}\label{problem9}
+ Let $M$ be an irreducible Markov chain with state space $\Omega$ and transition matrix $P$. Prove that if $M$ has period $d > 1$ then one can write
+ \begin{equation}\label{9e1}
+\Omega = \bigcupdot_{i = 0}^{d-1} C_i
+\end{equation} 
+such that for every $i \in C_k$, $k = 0, \ldots , d - 1$
+\begin{equation*}
+\sum_{j \in C_{k+1}} P_{ij} = 1
+\end{equation*} 
+(where here $C_d = C_0$). Moreover, the decomposition of (\ref{9e1}) is unique.
+\end{problem}
+\begin{proof}
+
+\end{proof}		
+
+ \begin{problem}{10}\label{problem10}
+\end{problem}
+\begin{proof}
+
+\end{proof}		
+
+ \begin{problem}{11}\label{problem11}
 \end{problem}
 \begin{proof}
 
