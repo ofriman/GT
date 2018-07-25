@@ -59,7 +59,27 @@ We will consider the simplest eigenvector  and we take $x_2 = \ldots = x_{n+1} =
 \lambda x_1 = n
 \end{equation*}
 having $\lambda = x_1 = \sqrt{n}$ gives us two eigenvalues $\pm \sqrt{n}$
+\end{proof}		
 
+\begin{problem}{2}\label{problem2}
+Let $G$ be a graph. Is it true that $\lambda_n(G) < 0$ always hold? Prove your claims.
+\end{problem}
+
+\begin{proof}
+No, this is not true, we know that $\sum_i \lambda_i = 0$ so it will be true only if $\lambda_1(G) > 0$.
+Contradiction by example, let $A(G) = 
+\begin{pmatrix}
+0 & 0  \\
+0& 0  \\
+\end{pmatrix}$
+
+\begin{equation*}
+det(A(G) - \lambda I) =
+\begin{vmatrix}
+-\lambda & 0            \\ 
+0             & -\lambda \\
+\end{vmatrix} = (-\lambda)^2
+\end{equation*}
 \end{proof}		
    
 \begin{thebibliography}{9} 
