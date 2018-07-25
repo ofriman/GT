@@ -343,6 +343,28 @@ such that for every $i \in C_k$, $k = 0, \ldots , d - 1$
 \end{problem}
 \begin{proof}
 
+\cite[Theorem 4.1]{pierre_markov} prove this question.
+  
+\begin{quote}{\cite[Theorem 4.1]{pierre_markov} }{(Cyclic Structure)}
+For any irreducible Markov chain, one can find a unique partition of E into $d$ classes $C_0, C_1, \ldots, C_{d-1}$ such that for all $k,i \in C_k$,
+\begin{equation*}
+\sum_{j \in C_{k+1}} P_{ij} = 1
+\end{equation*} 
+where by convention $C_d = C_0$, and where $d$ is maximal (that is, there is no other such partition $C'_0, C'_1, \ldots, C'_{d'-1}$ with $d' > d$)
+\hfill\break
+Proof.
+``A direct consequence of Theorem 4.3 below''
+\end{quote}
+
+\begin{quote}{\cite[Theorem 4.3]{pierre_markov} }({Lattice Theorem)}
+Let P be an irreducible stochastic matrix with period $d$. Then for all states $i,j$ there exist $m \geq 0$ and $n_0 \geq 0$ ($m$ and $n_0$ possibly depending on $i, j$) such that
+\begin{equation*} 
+p_{i,j}(m+nd) > 0, \forall n \geq n_0
+\end{equation*} 
+\hfill\break
+Proof.
+First observe that it suffices to prove this for $i = j$. Indeed, there exists $m$ such that $p_{ij}(m) > 0$, because $j$ is accessible from $i$, the chain being irreducible, and therefore, it for some $n_0 \geq 0$ we have $p_{ij}(nd) > 0$ for all $n \geq n_0$, then $p_{ij}(m + nd) \geq p_{ij}(m)p_{jj}(nd) > 0$ for all $n \geq n_0$. The gcd of the set $A = \{k \geq 1 \mid p_{ij}(k) > 0\}$ is $d$, and $A$ is closed under addition. The set $A$ therefore contains all but a finite nunmber of the positive multiples of $d$ (see Theorem 1.1 of the Appendix). In other words, there exists $n_0$
+ such that $n > n_0$ implies $p_{jj} (nd) > 0$\end{quote}
 \end{proof}		
 
  \begin{problem}{10}\label{problem10}
@@ -387,6 +409,10 @@ The adjacency matrix of a graph.
 Elad Aigner-Horev,
 Information from the spectrum of the adjacency matrix.
 \\\texttt{http://www.elad-horev.org/Expositions/basic\_info\_spec.pdf}
+
+\bibitem{pierre_markov}
+Pierre Bremaud,
+Markov Chains: Gibbs Fields, Monte Carlo Simulation, and Queues.
 \end{thebibliography}
 
 \end{document}
