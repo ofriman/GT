@@ -240,9 +240,55 @@ Notice that $0 \leq e_G(X,Y) \leq d \abs{X}$
  \end{enumerate}
  
 \end{problem}
-\begin{proof}
 
-\end{proof}		
+ \begin{enumerate}
+ \item
+ \begin{proof}
+ We will use \ref{problem5} inequality.
+
+\begin{equation*}
+\left\lvert  e_G(X,Y) - \frac{d\abs{X}\abs{Y}}{n} \right\rvert \leq \lambda(G) \sqrt{  \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} 
+\end{equation*}	
+   
+We can set $\abs{X} = \lambda(G)n/d,\abs{Y} = \lambda(G)n/d$.
+  
+ \begin{equation*}
+\left\lvert  e_G(X,Y) - \frac{d\lambda(G)\frac{n}{d}\lambda(G)\frac{n}{d}}{n} \right\rvert \leq \lambda(G) \sqrt{  \lambda(G)\frac{n}{d}\lambda(G)\frac{n}{d}  \left( 1 - \frac{\lambda(G)\frac{n}{d}}{n} \right)\left( 1 - \frac{\lambda(G)\frac{n}{d}}{n} \right)} 
+\end{equation*}	
+
+Simplify equation
+
+ \begin{equation*}
+\left\lvert  e_G(X,Y) - \frac{d\left(\lambda(G)\frac{n}{d}\right)^2}{n} \right\rvert \leq \lambda(G)^2\frac{n}{d}\left( 1 - \frac{\lambda(G)\frac{n}{d}}{n} \right)
+\end{equation*}	
+
+remove absolute value 
+
+\begin{equation*}
+-\lambda(G)^2\frac{n}{d}\left( 1 - \frac{\lambda(G)\frac{n}{d}}{n} \right) \leq  e_G(X,Y) - \frac{d\left(\lambda(G)\frac{n}{d}\right)^2}{n} \leq \lambda(G)^2\frac{n}{d}\left( 1 - \frac{\lambda(G)\frac{n}{d}}{n} \right)
+\end{equation*}	
+
+Let look at the first inequality
+
+\begin{equation*}
+-\lambda(G)^2\frac{n}{d}\left( 1 - \frac{\lambda(G)\frac{n}{d}}{n} \right) \leq  e_G(X,Y) - \frac{d\left(\lambda(G)\frac{n}{d}\right)^2}{n}
+\end{equation*}	
+
+Now we can isolate $e_G(X,Y)$
+
+\begin{align*}
+e_G(X,Y) & \geq
+-\lambda(G)^2\frac{n}{d}\left( 1 - \frac{\lambda(G)\frac{n}{d}}{n} \right) + \frac{d\left(\lambda(G)\frac{n}{d}\right)^2}{n}   \\ &=
+-\lambda(G)^2\frac{n}{d} + \lambda(G)^3 \frac{n}{d^2} + \lambda(G)^2 \frac{n}{d} \\&=
+ \lambda(G)^3 \frac{n}{d^2} \quad\text{( \ref{problem4} )}  \\&\geq
+ d n \geq 1
+\end{align*}	
+\end{proof}
+ \item
+ 
+ \item
+ \end{enumerate}
+		
 
  \begin{problem}{8}\label{problem8}
  Prove that if a connected $d$-regular $n$-vertex graph satisfies
