@@ -368,6 +368,24 @@ First observe that it suffices to prove this for $i = j$. Indeed, there exists $
 \end{proof}		
 
  \begin{problem}{10}\label{problem10}
+ Let $M$ be a Markov chain with transition matrix $P$ and state space $\Omega$.
+ For $i,j \in \Omega$ and $n \in \Z^{+} define$
+ \begin{equation*} 
+f^{(n)}_{ij} := Pr[T_j=n\mid X_0=i]
+\end{equation*} 
+ \begin{enumerate}
+ \item Prove that for all $n \geq 1$
+  \begin{equation*} 
+P^{(n)}_{ij} = \sum_{m=1}^n f_{ij}^{(m)}P_{ij}^{n-m}
+\end{equation*} 
+
+ \item Let $j \in \Omega$ be transient. Prove that
+  \begin{equation*} 
+\lim_{n\to\infty} P_{ij}^{(n)} = 0
+\end{equation*} 
+for all $i \in \Omega$
+  \end{enumerate}
+
 \end{problem}
 \begin{proof}
 
