@@ -243,9 +243,16 @@ Notice that $0 \leq e_G(X,Y) \leq d \abs{X}$
 \lambda(G) \geq &
 \sqrt{d}\left(\frac{\left\lvert   d \abs{X} - \frac{d\abs{X}\abs{Y}}{n} \right\rvert}{\sqrt{ d \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }\right) \\ = &
 \sqrt{d}\left(\frac{\sqrt{ d \abs{X}} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert}{\sqrt{\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }\right)\\ = &
-\sqrt{d}\left(\frac{\sqrt{ d \abs{X} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert}}{\sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} }\right) \\ \geq & 
-\sqrt{d} \left(1 - 	\frac{1}{\sqrt{n}}\right) \quad \text{(???)}
+\sqrt{d}\left(\frac{\sqrt{ d \abs{X} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert}}{\sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} }\right) \\ = & 
+\sqrt{d}\left(\frac{\sqrt{ d \abs{X} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert } + \sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} - \sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} }{\sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} }\right) \\ = & 
+\sqrt{d}\left(1 - \frac{\sqrt{ d \abs{X} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert } - \sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} }{\sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} }\right)
 \end{align*}
+
+\begin{align*}
+\lim_{n\to\infty} &= \frac{\sqrt{ d \abs{X} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert } - \sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} }{\sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} }  \\=&
+\frac{\sqrt{ d \abs{X}} - \sqrt{\abs{Y} } }{\sqrt{\abs{Y}} }
+\end{align*}
+
 \end{proof}		
 
  \begin{problem}{7}\label{problem7}
