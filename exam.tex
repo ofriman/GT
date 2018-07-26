@@ -135,12 +135,13 @@ Let $x =
 \begin{pmatrix}
 x_1 & \ldots & x_n
 \end{pmatrix}^T
-$ be a non-negative unit eigenvector of $G - uv$ corresponding to $\lambda_1(G - uv)$. Then
+$ be a non-negative (\cite[Theorem 1]{perron_frobenius}) unit eigenvector of $G - uv$ corresponding to $\lambda_1(G - uv)$. Then
  \begin{equation*}
 \lambda_1(G - uv) = x^TA(G-uv)x \leq x^TA(G)x \leq \lambda_1(G)
 \end{equation*}
 if $\lambda_1(G -uv) = \lambda_1(G)$ then $x$ is the principal eigenvector of $G$ and hence has no zero entries. Now $x^TA(G-uv)x = x^TA(G)x - 2x_ux_v  < \lambda_1 (G - uv)$, a contradiction.
 \end{quote}
+
 
   \item
   \cite[Proposition 1.3.9]{introduction-spectra} prove this question.
