@@ -24,6 +24,9 @@
 \makeatother
 \newcommand{\bigcupdot}{\charfusion[\mathop]{\bigcup}{\cdot}}
 
+\newcommand\myeq{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily def}}}{=}}}
+
+
 \let\oldquote\quote
 \let\endoldquote\endquote
 \renewenvironment{quote}[2][]
@@ -387,10 +390,44 @@ for all $i \in \Omega$
   \end{enumerate}
 
 \end{problem}
+ \begin{enumerate}
+ \item
+\begin{proof}
+In \cite[Theorem 12.33]{markov} they used the extended Markov property to obtain the same result.
+
+\begin{quote}{\cite[Theorem 12.7]{markov} }{(Extended Markov prop)}
+Let $X$ be a Markov chain. For $n \geq 0$, for any event $H$ given in terms of the past history $X_0, X_1, \ldots, X_{n-1},$ and any event $F$ given in terms of the future $X_{n+1}, X_{n+2}, \ldots,$
+\begin{equation*}
+P(F \mid X_n = i, H) = P(F \mid X_n = i) \quad \text{for } i \in S
+\end{equation*} 
+\end{quote}
+
+\begin{quote}{\cite[Theorem 12.33]{markov} }{}
+Using conditional probability and the extended Markov property, Theorem 12.7, for $n \geq 1$,
+ \begin{equation}\label{12d34}
+p_{i,j}(n) = \sum^{\infty}_{m=1}P_i (X_n = j \mid T_j = m)P_i(T_j =m).
+\end{equation} 
+The summand is 0 for $m > n$, since in this case the first passage to $j$ has not taken place by time $n$. For $m \leq n$, 
+\begin{equation*} 
+P_i(X_n = j \mid T_j=m)=P_i(X_n = j \mid X_m = j, H),
+\end{equation*} 
+where $H = \{X_r \neq j \text{ for } 1\leq r < m \}$ is an event defined prior to time $m$. By the extended Markov property,
+\begin{equation*} 
+P_i(X_n = j \mid T_j=m)=P(X_n = j \mid X_m = j) = P_j(X_{n-m}=j).
+\end{equation*} 
+We substitute this into (\ref{12d34}) to obtain
+\begin{equation*} 
+p_{ij}(n) = \sum_{m=1}^n f_{ij}^{(m)}P_{ij}^{n-m}
+\end{equation*} 
+\end{quote}
+\end{proof}		
+
+ \item
 \begin{proof}
 
 \end{proof}		
-
+  \end{enumerate}
+  
  \begin{problem}{11}\label{problem11}
 \end{problem}
 \begin{proof}
@@ -431,6 +468,10 @@ Information from the spectrum of the adjacency matrix.
 \bibitem{pierre_markov}
 Pierre Bremaud,
 Markov Chains: Gibbs Fields, Monte Carlo Simulation, and Queues.
+
+\bibitem{markov}
+Markov chains.
+\\\texttt{http://www.statslab.cam.ac.uk/~grg/teaching/chapter12.pdf}
 \end{thebibliography}
 
 \end{document}
