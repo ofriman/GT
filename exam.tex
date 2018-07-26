@@ -313,14 +313,14 @@ e_G(X,Y) & \geq
  \item
   \begin{proof}
 
-	\color{red} maybe same as above
+	{\color{red} no idea, maybe same approach as above}
 
 \end{proof}
 
  \item
    \begin{proof}
 
-		\color{red} no idea
+		{\color{red} no idea}
 
 \end{proof}
  \end{enumerate}
@@ -337,9 +337,20 @@ d - \lambda(G) \geq \frac{k^2}{2d}
 \end{equation*}
 \end{problem}
 \begin{proof}
+This is follow from Tanner.
+\begin{quote}{\cite[Lemma 15]{expander}}{
+(\cite[(Tanner]{tanner}) Let $G$ be a connected $d$-regular graph on $n$ vertices. If $\lambda(G) \neq d$ then
+ \begin{equation*}
+\abs{N_G(X)} \geq \left(\frac{d^2}{\lambda(G)^2 + (d^2 - \lambda(G)^2)\frac{\abs{X}}{n} }\right)\abs{X}
+\end{equation*}
+}\end{quote}
 
-\color{red} no idea
+Let use Tanner inequity and Set $\abs{X} = \frac{n}{2}$
 
+ \begin{align*}
+\abs{N_G(X)} & \geq \left(\frac{d^2}{\lambda(G)^2 + (d^2 - \lambda(G)^2)\frac{1}{2} }\right)\frac{n}{2} \\&=
+\left(\frac{2 d^2}{d^2 + \lambda(G)^2}\right)\frac{n}{2}
+\end{align*}
 \end{proof}		
 
  \begin{problem}{9}\label{problem9}
@@ -475,6 +486,11 @@ Background material
 Elad Aigner-Horev,
 The adjacency matrix of a graph.
 \\\texttt{http://www.elad-horev.org/Expositions/expander\_mixing\_lemma.pdf}
+
+\bibitem{tanner}
+R. Michael Tanner, Explicit concentrators from generalized N-gons, SIAM J. Algebraic Discrete
+//Methods 5 (1984), no. 3, 287–293. MR 752035
+
 
 \bibitem{basic_spec}
 Elad Aigner-Horev,
