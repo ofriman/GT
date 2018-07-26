@@ -68,7 +68,7 @@
 \maketitle
 				   
 \begin{problem}{1}\label{problem1}
-Show how to find the two non-zero eigenvalues of $K_{1,n}$ using the functional
+Show how to find the two non-zero eigenvalues of $K_{1,n}$ using the \textbf{functional}
 approach. A natural alternative approach would be to memorise or dig up the spectrum of $K_{n,m}$
 considered here; and then derive the answer from that. This will not be accepted as an answer.
 \end{problem}
@@ -94,12 +94,13 @@ Let $G$ be a graph. Is it true that $\lambda_n(G) < 0$ always hold? Prove your c
 \end{problem}
 
 \begin{proof}
-No, this is not true, we know that $\sum_i \lambda_i = 0$ so it will be true only if $\lambda_1(G) > 0$.
-Contradiction by example, let $A(G) = 
+No, this is not true, as $\sum_i \lambda_i = 0$ \cite{product_and_sum_of_eigenvalues}, this will be true only if $\lambda_1(G) \neq 0$.
+Contradiction by example. Let G be a graph where $V(G) = \{v_1,v_2\}$ and $E(G) = \{\}$ Then
+$A(G) = 
 \begin{pmatrix}
 0 & 0  \\
 0& 0  \\
-\end{pmatrix}$
+\end{pmatrix}$.
 
 \begin{equation*}
 det(A(G) - \lambda I) =
@@ -441,6 +442,11 @@ $j$ is transient and so it follow that Pr$[X_n = x\text{ for } \infty \text{ man
 Elad Aigner-Horev,
 The adjacency matrix of a graph.
 \\\texttt{http://www.elad-horev.org/Expositions/Adjacency\_Matrix.pdf}
+
+\bibitem{product_and_sum_of_eigenvalues}
+Steven Zheng,
+Product and Sum of Eigenvalues.
+\\\texttt{https://brilliant.org/discussions/thread/product-and-sum-of-eigenvalues/}
 
 \bibitem{perron_frobenius}
 Elad Aigner-Horev,
