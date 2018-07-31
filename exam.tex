@@ -126,8 +126,8 @@ Prove that $\lambda_1(H) < \lambda_1(G)$.
   
   
   \item\label{problem3.1}
-   \cite[Proposition 1.3.10]{introduction-spectra} prove this question.
-  
+  This is follow from \cite[Proposition 1.3.10]{introduction-spectra}.
+   
 \begin{quote}{\cite[Proposition 1.3.10]{introduction-spectra}}{If $G - uv$ is the graph obtained from a connected graph $G$ by deleting the edge $uv$, then $\lambda_1(G-uv) < \lambda_1(G)$.}
 \hfill\break
 Proof.
@@ -144,7 +144,7 @@ if $\lambda_1(G -uv) = \lambda_1(G)$ then $x$ is the principal eigenvector of $G
 
 
   \item
-  \cite[Proposition 1.3.9]{introduction-spectra} prove this question.
+    This is follow from \cite[Proposition 1.3.9]{introduction-spectra}.
 \begin{quote}{\cite[Proposition 1.3.9]{introduction-spectra}}{For any vertex $u$ of a connected graph $G$, we have $\lambda_1(G-u) < \lambda_1(G)$.}
 \hfill\break
 Proof.
@@ -173,7 +173,7 @@ where here $\overline{d}(G)$ is the average degree of G and $\Delta(G)$ is the m
 \end{problem}
 
 \begin{proof}
- \cite[Proposition 1.2.2]{laszlo_background} prove this question.
+This was done in \cite[Proposition 1.2.2]{laszlo_background}.
 \begin{quote}{ \cite[Proposition 1.2.2]{laszlo_background}}{For every graph $G$,  
 \begin{equation*}
 max \Big\{ \overline{d}, \sqrt{d_{\text{max}}} \Big\} \leq \lambda_1 \leq d_{\text{max}}
@@ -212,7 +212,7 @@ Let $G$ be a connected $d$-regular $n$-vertex graph and let $\lambda(G) := max_{
 \end{problem}
 
 \begin{proof}
- \cite[Lemma 8]{expander} prove this question. (Notice that this is the same inequality after setting the length of the sets).
+this is follow from \cite[Lemma 3.3]{eml}
 \end{proof}		
  
  \begin{problem}{6}\label{problem6}
@@ -236,21 +236,20 @@ Recall that $G$ and $\lambda(G)$ are the same as in \ref{problem5}.
 \begin{align*}
 \lambda(G) \geq &
 \frac{\left\lvert  e_G(X,Y) - \frac{d\abs{X}\abs{Y}}{n} \right\rvert}{\sqrt{  \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }
-\\ = & \sqrt{d}\left(\frac{\left\lvert  e_G(X,Y) - \frac{d\abs{X}\abs{Y}}{n} \right\rvert}{\sqrt{ d \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }\right)
 \end{align*}
 Notice that $0 \leq e_G(X,Y) \leq d \abs{X}$
 \begin{align*}
 \lambda(G) \geq &
-\sqrt{d}\left(\frac{\left\lvert   d \abs{X} - \frac{d\abs{X}\abs{Y}}{n} \right\rvert}{\sqrt{ d \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }\right) \\ = &
-\sqrt{d}\left(\frac{\sqrt{ d \abs{X}} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert}{\sqrt{\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }\right)\\ = &
-\sqrt{d}\left(\frac{\sqrt{ d \abs{X} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert}}{\sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} }\right) \\ = & 
-\sqrt{d}\left(\frac{\sqrt{ d \abs{X} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert } + \sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} - \sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} }{\sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} }\right) \\ = & 
-\sqrt{d}\left(1 - \frac{\sqrt{ d \abs{X} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert } - \sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} }{\sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} }\right)
+\left(\frac{\left\lvert   d \abs{X} - \frac{d\abs{X}\abs{Y}}{n} \right\rvert}{\sqrt{ \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }\right) \\ = &
+\left(\frac{ d \abs{X} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert}{\sqrt{ \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }\right) \\ = &
+\sqrt{d}\left(\frac{ \sqrt{d} \abs{X} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert}{\sqrt{ \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }\right) \\ = &
+\sqrt{d}\left(\frac{ \sqrt{d} \abs{X} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert + \sqrt{ \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)}  - \sqrt{ \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }{\sqrt{ \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }\right) \\ = &
+\sqrt{d}\left(1 - \frac{\sqrt{d} \abs{X} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert  - \sqrt{ \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }{\sqrt{ \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }\right)
 \end{align*}
 
 \begin{align*}
-\lim_{n\to\infty} &= \frac{\sqrt{ d \abs{X} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert } - \sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} }{\sqrt{\abs{Y} \left( 1 - \frac{\abs{X}}{n} \right)} }  \\=&
-\frac{\sqrt{ d \abs{X}} - \sqrt{\abs{Y} } }{\sqrt{\abs{Y}} }
+\lim_{n\to\infty} &= \frac{\sqrt{d} \abs{X} \left\lvert  1 - \frac{\abs{Y}}{n} \right\rvert  - \sqrt{ \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} }{\sqrt{ \abs{X}\abs{Y}  \left( 1 - \frac{\abs{X}}{n} \right)\left( 1 - \frac{\abs{Y}}{n} \right)} } \\&=
+ \frac{\sqrt{d} \abs{X} - \sqrt{ \abs{X}\abs{Y}  } }{\sqrt{ \abs{X}\abs{Y} } } =  \frac{\sqrt{d\abs{X}}- \sqrt{\abs{Y}  } }{\sqrt{ \abs{Y} } }
 \end{align*}
 
 \end{proof}		
@@ -313,7 +312,7 @@ e_G(X,Y) & \geq
  \item
   \begin{proof}
 
-	{\color{red} no idea, maybe same approach as above}
+	{\color{red} no idea}
 
 \end{proof}
 
@@ -337,20 +336,11 @@ d - \lambda(G) \geq \frac{k^2}{2d}
 \end{equation*}
 \end{problem}
 \begin{proof}
-This is follow from Tanner.
-\begin{quote}{\cite[Lemma 15]{expander}}{
-(\cite[(Tanner]{tanner}) Let $G$ be a connected $d$-regular graph on $n$ vertices. If $\lambda(G) \neq d$ then
- \begin{equation*}
-\abs{N_G(X)} \geq \left(\frac{d^2}{\lambda(G)^2 + (d^2 - \lambda(G)^2)\frac{\abs{X}}{n} }\right)\abs{X}
-\end{equation*}
-}\end{quote}
-
-Let use Tanner inequity and Set $\abs{X} = \frac{n}{2}$
-
- \begin{align*}
-\abs{N_G(X)} & \geq \left(\frac{d^2}{\lambda(G)^2 + (d^2 - \lambda(G)^2)\frac{1}{2} }\right)\frac{n}{2} \\&=
-\left(\frac{2 d^2}{d^2 + \lambda(G)^2}\right)\frac{n}{2}
-\end{align*}
+Recall that $graph=(A\cup B, E)$ fulfill Hall-($\beta, \gamma$) A-side if
+ \begin{equation}\label{9e1}
+ \abs{N_G(X)} \leq (1 + \beta)\abs{X}
+\end{equation}
+$\forall X \subseteq A, \abs{X} \leq \gamma\abs{A}$
 \end{proof}		
 
  \begin{problem}{9}\label{problem9}
@@ -366,7 +356,7 @@ such that for every $i \in C_k$, $k = 0, \ldots , d - 1$
 \end{problem}
 \begin{proof}
 
-\cite[Theorem 4.1]{pierre_markov} prove this question.
+This was done in \cite[Theorem 4.1]{pierre_markov}.
   
 \begin{quote}{\cite[Theorem 4.1]{pierre_markov} }{(Cyclic Structure)}
 For any irreducible Markov chain, one can find a unique partition of E into $d$ classes $C_0, C_1, \ldots, C_{d-1}$ such that for all $k,i \in C_k$,
@@ -444,18 +434,17 @@ p_{ij}(n) = \sum_{m=1}^n p_{ij}(n-m) f_{ij}(m)
 
  \item
 \begin{proof}
-$j$ is transient and so it follow that Pr$[X_n = x\text{ for } \infty \text{ many } n] < 1$ \cite{markov_elad}. We can deduce that the probability of going from state i to state j in infinity time steps is 0.
+This was done in \cite[Proposition 12.39]{markov}.
+\begin{quote}{\cite[Proposition 12.39]{markov} }{}
+Let $i,j \in S$. if $j$ is transient, then $p_{i,j}(n) \to 0$ as $n \to \infty$
+\hfill\break Proof.
+Let $j$ be transient. By Theorem 12.30 (Also \cite[Lemma 11]{markov_elad}) and Abel's lemma, $P_{j,j}(1) < \infty$. By Therorem 12.33, $P_i,j(1) < \infty$, and hence the $n$th term in this sum, $p_{i,j}(n)$, tends to zero as $n \to \infty$
+\end{quote}
 
-{\tiny\color{red} only intuition}
+
 \end{proof}		
   \end{enumerate}
   
- \begin{problem}{11}\label{problem11}
-\end{problem}
-\begin{proof}
-
-\end{proof}		
-
 \begin{thebibliography}{9} 
 \bibitem{adjacency_matrix}
 Elad Aigner-Horev,
@@ -509,6 +498,16 @@ Markov chains.
 Elad Aigner-Horev,
 Classifying states of Markov chains.
 \\\texttt{http://www.elad-horev.org/Expositions/Markov1\_5.pdf}
+
+\bibitem{eml}
+Thomas Sauerwald and He Sun
+Expander Mixing Lemma.
+\\\texttt{https://resources.mpi-inf.mpg.de/departments/d1/teaching/ws11/SGT/Lecture3.pdf}
+
+\bibitem{hall}
+Anup Rao
+Hall’s Theorem.
+\\\texttt{https://homes.cs.washington.edu/~anuprao/pubs/CSE599sExtremal/lecture6.pdf}
 \end{thebibliography}
 
 \end{document}
